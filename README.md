@@ -43,7 +43,7 @@ React 18, TypeScript, Create React App
 
 ## What I would do differently
 
-This was an early project, and a few things stand out looking back.
+This was an early project in my computer science bachelors, and a few things stand out looking back.
 
 The dealer's turn mutates the hand array directly before calling the setter, which means React sees the same array reference and doesn't reliably re-render. The fix is to build a new array and set that. Restarting has a related issue: it creates a new deck and immediately deals from the old one, because state updates don't apply synchronously.
 
